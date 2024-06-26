@@ -22,6 +22,7 @@ class Product(models.Model):
     created_at = models.DateField(auto_now_add=True, verbose_name='Дата создания')
     updated_at = models.DateField(auto_now=True, verbose_name='Дата последнего изменения')
 
+
     class Meta:
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
