@@ -1,0 +1,93 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Ноутбук HP",
+      "description": "описание ноутбука",
+      "image": "",
+      "category": 1,
+      "price": "50000.00",
+      "created_at": "2024-06-27",
+      "updated_at": "2024-06-27"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Фен Dyson",
+      "description": "Описание фена",
+      "image": "",
+      "category": 3,
+      "price": "45000.00",
+      "created_at": "2024-06-27",
+      "updated_at": "2024-06-27"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Телефон LG",
+      "description": "Описание телефона",
+      "image": "",
+      "category": 2,
+      "price": "15000.00",
+      "created_at": "2024-06-27",
+      "updated_at": "2024-06-27"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Зубная щетка",
+      "description": "Описание зубной щетки",
+      "image": "",
+      "category": 3,
+      "price": "6000.00",
+      "created_at": "2024-06-27",
+      "updated_at": "2024-06-27"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "name": "Планшет Samsung",
+      "description": "описание планшета",
+      "image": "",
+      "category": 2,
+      "price": "25000.00",
+      "created_at": "2024-06-27",
+      "updated_at": "2024-06-27"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "name": "Ноутбук  Asus",
+      "description": "описание ноутбука",
+      "image": "",
+      "category": 1,
+      "price": "45000.00",
+      "created_at": "2024-06-27",
+      "updated_at": "2024-06-27"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+      "name": "Электробритва",
+      "description": "Описание бритвы",
+      "image": "",
+      "category": 3,
+      "price": "5000.00",
+      "created_at": "2024-06-27",
+      "updated_at": "2024-06-27"
+    }
+  }
+]

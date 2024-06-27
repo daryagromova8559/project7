@@ -1,0 +1,26 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Компьютеры",
+      "description": "ПК, ноутбуки, периферия"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Смартфоны",
+      "description": "Смартфоны, гаджеты, планшеты"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "name": "Красота и здоровье",
+      "description": "Укладка и сушка волос, бритье и стрижка, уход за полостью рта"
+    }
+  }
+]
