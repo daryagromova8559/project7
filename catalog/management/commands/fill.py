@@ -1,8 +1,6 @@
-import json
-
 from django.core.management import BaseCommand
-
 from catalog.models import Category, Product
+import json
 
 
 class Command(BaseCommand):
