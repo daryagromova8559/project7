@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from django.views.generic import ListView
 
+from django.views.generic import DetailView
+
 from catalog.models import Product
 
 
@@ -9,6 +11,10 @@ class ProductListView(ListView):
     model = Product
     template_name = 'catalog/home.html'
 
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = 'catalog/product_detail.html'
 
 def contacts(request):
     if request.method == 'POST':
