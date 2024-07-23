@@ -5,3 +5,5 @@ tzdata
 psycopg2
 pillow
 ipython
+slugify
+pytils
