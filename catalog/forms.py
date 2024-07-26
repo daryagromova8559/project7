@@ -28,16 +28,18 @@ class ProductForm(StyleFormMixin, ModelForm):
     def clean_name(self):
         name = self.cleaned_data.get('name')
 
-        if name in words:
+        for word in words:
+          if word in name:
             raise ValidationError('Возникла ошибка в Наименовании')
-        return name
+          return name
 
     def clean_description(self):
         description = self.cleaned_data.get('description')
 
-        if description in words:
+        for word in words:
+          if word in description:
             raise ValidationError('Возникла ошибка в Описании')
-        return description
+          return description
 
 class VersionForm(StyleFormMixin, ModelForm):
     class Meta:
