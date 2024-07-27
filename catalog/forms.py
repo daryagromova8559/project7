@@ -6,8 +6,7 @@ from catalog.models import Product, Version
 words = ('казино', 'криптовалюта', 'крипта', 'биржа', 'дешево', 'бесплатно', 'обман', 'полиция', 'радар')
 
 
-
-class StyleFormMixin:
+class StyleFormMixin(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
@@ -15,9 +14,6 @@ class StyleFormMixin:
                 field.widget.attrs['class'] = 'form-check-input'
             else:
                 field.widget.attrs['class'] = 'form-control'
-
-
-
 
 
 class ProductForm(StyleFormMixin, ModelForm):
@@ -29,17 +25,18 @@ class ProductForm(StyleFormMixin, ModelForm):
         name = self.cleaned_data.get('name')
 
         for word in words:
-          if word in name:
-            raise ValidationError('Возникла ошибка в Наименовании')
-          return name
+            if word in name:
+                raise ValidationError('Возникла ошибка в Наименовании')
+        return name
 
     def clean_description(self):
         description = self.cleaned_data.get('description')
 
         for word in words:
-          if word in description:
-            raise ValidationError('Возникла ошибка в Описании')
-          return description
+            if word in description:
+                raise ValidationError('Возникла ошибка в Описании')
+        return description
+
 
 class VersionForm(StyleFormMixin, ModelForm):
     class Meta:

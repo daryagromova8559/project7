@@ -44,6 +44,20 @@ class ProductCreateView(CreateView):
             context_data['formset'] = VersionFormset()
         return context_data
 
+    def form_valid(self, form):
+        context = self.get_context_data()
+        formset = context['formset']
+        self.object = form.save()
+        user = self.request.user
+        self.object.owner = user
+        self.object.save()
+        if formset.is_valid():
+            formset.instance = self.object
+            formset.save()
+        else:
+            return self.form_invalid(form)
+        return super().form_valid(form)
+
 class ProductUpdateView(UpdateView):
     model = Product
     form_class = ProductForm
