@@ -23,6 +23,7 @@
                         <h3 class="card-text">{{ product }}</h3>
                         <p class="card-text">{{ product.description | slice:100 }}</p>
                         <p class="card-text">Текущая версия: {{ product.version }}</p>
+                        <p class="card-text">Создал: {{ product.owner}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a class="btn btn-primary" href="{% url 'catalog:product_detail' product.pk %}"

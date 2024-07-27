@@ -1,5 +1,4 @@
 asgiref
-Django
 sqlparse
 tzdata
 psycopg2
@@ -7,3 +6,4 @@ pillow
 ipython
 slugify
 pytils
+Django==4.2
