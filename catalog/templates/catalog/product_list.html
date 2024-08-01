@@ -28,10 +28,14 @@
                             <div class="btn-group">
                                 <a class="btn btn-primary" href="{% url 'catalog:product_detail' product.pk %}"
                                    role="button">Подробнее</a>
+                                {% if perms.catalog.set_published and perms.catalog.can_edit_description and perms.catalog.can_edit_category or user == product.owner %}
                                 <a class="btn btn-warning" href="{% url 'catalog:product_update' product.pk %}"
                                    role="button">Редактировать</a>
+                                {% endif %}
+                                {% if user == product.owner %}
                                 <a class="btn btn-danger" href="{% url 'catalog:product_delete' product.pk %}"
                                    role="button">Удалить</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
