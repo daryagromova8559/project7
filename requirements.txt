@@ -7,3 +7,5 @@ ipython
 slugify
 pytils
 Django==4.2
+redis
+python-dotenv
